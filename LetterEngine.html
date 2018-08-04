@@ -1,0 +1,42 @@
+<html>
+    <!--Using the JavaScript language, have the function LetterChanges(str) take the str parameter being passed and modify it using the following algorithm. 
+        Replace every letter in the string with the letter following it in the alphabet (ie. c becomes d, z becomes a). 
+        Then capitalize every vowel in this new string (a, e, i, o, u) and finally return this modified string.  -->
+    <head>
+        <title>"Letter Engine By Yasiru"</title>
+        <style>
+            body {
+                background-color: #001f3f;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            function LetterChanges(letterToChange) { 
+                var letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","w","x","y","z"];
+                var word = letterToChange.split("");
+                var j = 0;
+                var i = 0;
+                while(j < word.length){
+                    i = 0;
+                    while(i < 26){
+                    if(word[j] == letters[i]){
+                      if(letter[i] != "z"){
+                        word[j] = letters[i+1];
+                        i = 26;
+                      }else{
+                          word[j] = "z";
+                          i = 26;
+                           }
+                                            }
+                    i++;
+                                   } 
+                j++;        
+                     }        
+                letterToChange = word.join('');    
+                return letterToChange;
+        }
+        console.log(LetterChanges("yasiru"));
+        </script>                                                                                                                      
+    </body>
+</html>
